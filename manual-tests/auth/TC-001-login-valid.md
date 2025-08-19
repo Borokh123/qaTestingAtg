@@ -1,7 +1,10 @@
 TC -001 User authorization
 
-ID: TC-005
+ID: TC-001
 Title: Login verification with valid data
+**Preconditions:**  
+- User is registered in the system.  
+- Login page is accessible.  
 Steps:
 
 1.Go to https://atg.kh.ua/c/index.php?route=account/login
