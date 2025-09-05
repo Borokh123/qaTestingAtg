@@ -1,4 +1,5 @@
 TC -001 User authorization
+priority: P0
 Title: Login verification with valid data
 **Preonditions:**  
 - User is registered in the system.  
