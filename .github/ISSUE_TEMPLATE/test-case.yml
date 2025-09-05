@@ -1,5 +1,5 @@
-name: "Тест-кейс"
-description: "Шаблон для оформления тест-кейсов"
+name: "Test Case"
+description: "Template for documenting test cases"
 title: "[TC] "
 labels: ["test", "priority:medium"]
 
@@ -7,31 +7,66 @@ body:
   - type: textarea
     id: preconditions
     attributes:
-      label: "Предусловия"
-      placeholder: "Например: пользователь с ролью Customer; товар в корзине…"
+      label: "Preconditions"
+      description: "Environment, data, user role, or setup required before execution"
+      placeholder: "Example: User with Customer role is logged in; item exists in the cart"
 
   - type: textarea
     id: steps
     attributes:
-      label: "Шаги выполнения"
+      label: "Steps to Reproduce"
+      description: "Step-by-step instructions"
       placeholder: |
-        1) Перейти на страницу …
-        2) Нажать …
-        3) Проверить …
+        1) Go to the login page
+        2) Enter valid credentials
+        3) Click the Login button
     validations:
       required: true
 
   - type: textarea
     id: expected
     attributes:
-      label: "Ожидаемый результат"
-      placeholder: "Что должно произойти?"
+      label: "Expected Result"
+      placeholder: "Describe the expected outcome"
     validations:
       required: true
 
   - type: dropdown
     id: priority
     attributes:
-      label: "Приоритет"
+      label: "Priority"
       options: ["High", "Medium", "Low"]
       default: 1
+
+  - type: dropdown
+    id: level
+    attributes:
+      label: "Test Level"
+      options: ["Unit", "Integration", "System", "E2E"]
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: "Test Type"
+      options: ["Smoke", "Sanity", "Regression", "Feature", "API", "Performance", "Security", "Accessibility", "Compatibility"]
+
+  - type: checkboxes
+    id: platform
+    attributes:
+      label: "Platform"
+      options:
+        - label: "Web"
+        - label: "Android"
+        - label: "iOS"
+
+  - type: input
+    id: environment
+    attributes:
+      label: "Environment"
+      placeholder: "staging / production; browser or OS version"
+
+  - type: input
+    id: related
+    attributes:
+      label: "Related Issues/PRs"
+      placeholder: "#123, #456"
